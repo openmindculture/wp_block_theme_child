@@ -38,6 +38,8 @@ The child template is an incomplete stub including references to non-existing as
 
 The installation script has been conceived to work anywhere, but it has actually been tested and used mostly on Ubuntu Linux. There have been configuration and performance issues especially on slow Windows WSL Docker systems.
 
+![screenshot](doc/screenshot-themes.png)
+
 ## Requirements
 
 - npm
