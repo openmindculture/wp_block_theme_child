@@ -112,7 +112,7 @@ async function installAddonsAndCleanup() {
         'wp theme delete twentytwentytwo twentytwentyone twentytwenty twentynineteen twentyseventeen twentysixteen twentyfifteen twentyfourteen twentythirteen twentytwelve twentyeleven twentyten',
         { cwd: path.join(__dirname), commandOptions: ['--rm'] })
         .then(
-            () => { log('Deleted unnsecessary themes')},
+            () => { log('Deleted unnecessary themes')},
             err => { console.error('something went wrong:', err)}
         );
 
@@ -121,7 +121,7 @@ async function installAddonsAndCleanup() {
         'wp plugin delete akismet hello',
         { cwd: path.join(__dirname), commandOptions: ['--rm'] })
         .then(
-            () => { log('Deleted unnsecessary plugins')},
+            () => { log('Deleted unnecessary plugins')},
             err => { console.error('something went wrong:', err)}
         );
 }
