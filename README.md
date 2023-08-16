@@ -34,6 +34,8 @@ sudo chmod -R ug+rw themes
 
 This respository is based on a fork of [wp_cli_docker](https://github.com/openmindculture/wp_cli_docker) and follows the opposite direction of the classic / hybrid [wp_template_opinionated](https://github.com/openmindculture/wp_template_opinionated) theme template.
 
+The child template is an incomplete stub including references to non-existing assset files in  `themes/twentytwentythree-child/theme.json`. The theme needs to be edited and verified!
+
 The installation script has been conceived to work anywhere, but it has actually been tested and used mostly on Ubuntu Linux. There have been configuration and performance issues especially on slow Windows WSL Docker systems.
 
 ## Requirements
@@ -50,7 +52,7 @@ Modify [install-local-environment.js](./install-local-environment.js) to select 
 
 ```js
 /* specify the technical names (text domain) of plugins to be installed */
-'wp plugin install incompatibility-status updraftplus --activate';
+'wp plugin install --activate incompatibility-status';
 ```
 
 Some commercial / paid plugins cannot be installed automatically. They have to be uploaded or installed manually later.
