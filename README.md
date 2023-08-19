@@ -2,6 +2,10 @@
 
 [wp_block_theme_child](https://github.com/openmindculture/wp_block_theme_child) is a local host WordPress setup using Docker, docker-compose, and wp-cli to install themes and plugins, including a simple template skeleton for a Twenty Twenty-Three child theme using the template engine (`theme.json`), block editor and full-site editing.
 
+## TODO / Work in Progress
+
+This is an unfinished stub, based on `wp_cli_docker` (see below). Ideas and learning takeaways from other (open source) projects should be ported back to and collected in this repository.
+
 ## Usage
 
 ### Initial Setup
