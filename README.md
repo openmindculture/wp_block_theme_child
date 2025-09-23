@@ -8,6 +8,16 @@ theme using the template engine (`theme.json`), block editor and full-site editi
 
 This is an unfinished stub, based on `wp_cli_docker` (see below). Ideas and learning takeaways from other (open source) projects should be ported back to and collected in this repository.
 
+## White Label / Template
+
+To use this repository as a template for a new WordPress theme, fork it on GitHub or set it as a remote upstream of an existing project. Modify the `twentytwentyfive-child` theme according to your (customers') requirements.
+
+You can change the display name and screenshot to make the theme appear as an individual customer theme, while the technical name (textdomain) stays twentytwentyfive-child making it a child theme of the official WordPress theme Twenty Twenty-Five.
+
+Effectively, you will have two upstreams providing you with updates: twentytwentyfive (at run time via WordPress updates) and this template respository, `wp_block_theme_child`, only when you chose to check and pull updates into your forked/downstream version.
+
+Adhere to WordPress best practices, apply minimal changes and prefer content and configuration over modification to avoid conflicting side effects of any future update!
+
 ## Usage
 
 ### Initial Setup
@@ -43,6 +53,18 @@ Likewise, we might have to explicitly allow uploads by clients:
 - `npm stop` will retain local data after stopping
 - `npm run destroy` stops and removes local data
 
+## Customization
+
+- functions.php
+- screenshot.png
+- style.css
+- theme.json
+
+optionally:
+- custom assets (fonts, images)
+- custom scripts
+- custom blocks, block variations, or template parts
+
 ## Further Reading, Alternatives, and Known Issues
 
 ### References
@@ -55,13 +77,15 @@ https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/
 
 https://fullsiteediting.com/lessons/theme-json-typography-options/#using-the-web-fonts-api-with-theme-json
 
+TODO: check for updated possibilities and best practices like WP font API
+
 #### full site editing child themes
 
 https://fullsiteediting.com/lessons/child-themes/
 
-### Origin and ALternatives
+### Origin and Alternatives
 
-This respository is based on a fork of [wp_cli_docker](https://github.com/openmindculture/wp_cli_docker) and follows the opposite direction of the classic / hybrid
+This respository was based on a fork of [wp_cli_docker](https://github.com/openmindculture/wp_cli_docker) and follows the opposite direction of the classic / hybrid
 [wp_template_opinionated](https://github.com/openmindculture/wp_template_opinionated) theme template.
 
 ### Issues
@@ -69,18 +93,16 @@ This respository is based on a fork of [wp_cli_docker](https://github.com/openmi
 The child template is an incomplete stub including references to non-existing assset files in
 `themes/twentytwentythree-child/theme.json`. The theme needs to be edited and verified!
 
-The installation script has been conceived to work anywhere, but it has actually been tested and used mostly on Ubuntu Linux.
-There have been configuration and performance issues especially on slow Windows WSL Docker systems.
+The installation script has been conceived to work anywhere, but it has actually been tested and used mostly on Ubuntu Linux. There have been configuration and performance issues especially on slow Windows WSL Docker systems.
 
 ![screenshot](doc/screenshot-themes.png)
 
 ## Requirements
 
 - npm
-- Docker
-- docker-compose
+- Docker (incl. Docker compose)
 
-## Configuration
+## Development Setup Configuration
 
 ### Configure pre-installed Themes and Plugins
 
