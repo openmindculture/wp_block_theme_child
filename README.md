@@ -4,19 +4,16 @@
 to install themes and plugins, including a simple template skeleton for a Twenty-something child
 theme using the template engine (`theme.json`), block editor and full-site editing.
 
-⚠️ This repository is not actively maintained anymore! Please consider [`openmindculture/wp-impact-theme`](https://github.com/openmindculture/wp-impact-theme/) as a more up-to-date template!
-
 ## TODO / Work in Progress
 
-This is an unfinished stub, based on `wp_cli_docker` (see below). Ideas and learning takeaways from other (open source)
-projects should be ported back to and collected in this repository.
+This is an unfinished stub, based on `wp_cli_docker` (see below). Ideas and learning takeaways from other (open source) projects should be ported back to and collected in this repository.
 
 ## Usage
 
 ### Initial Setup
 
 Edit localhost ports and initial plugins in `install-local-environment.js` and `docker-compose.yml`,
-then run `npm install` and open http://localhost:8023/wp-admin (replace `8023` with the configured port) in your browser.
+then run `npm install` and open http://localhost:8025/wp-admin (replace `8025` with the configured port) in your browser.
 Log in with the default demo credentials (user: `admin`, password: `secret`).
 
 The following directories are mounted below the project root directory by default:

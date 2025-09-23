@@ -1,4 +1,7 @@
+themes
+themes/
 !themes/twentytwentythree-child
+!themes/twentytwentyfive-child
 plugins
 node_modules
 vendor
