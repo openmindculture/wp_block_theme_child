@@ -26,6 +26,37 @@ You can change the display name and screenshot to make the theme appear as an in
 
 Effectively, you will have two upstreams providing you with updates: twentytwentyfive (at run time via WordPress updates) and this template respository, `wp_block_theme_child`, only when you chose to check and pull updates into your forked/downstream version.
 
+### example content
+
+The example-content directory contains code that you can paste in code mode to fill three example pages, plus four blog posts three of which will be featured on the home page.
+
+Example content might mix German and English examples, as well as classic Lorem Ipsum placeholder text, and some Japanese, Ukrainian and Arabic sample text to ensure multiple character sets and writing directions are supported correctly.
+
+"Blog" is often called "news", but we can stick to the built-on blog `post` post type. Even when we think we need different post types, this might get done using categories.
+
+Product examples are inspired by actual second hand items that I used to offer at [Prelovedshop](https://www.prelovedshop.de/) , Kijiji, and Kleinanzeigen, as well as public open source content from Wikipedia, the free encyclopedia.
+
+### optional plugin options
+
+Recommendations based on small customer projects in recent years:
+
+- Contact Form 7
+- Display Featured Image in Post List
+- Incompatibility Status
+- Polylang
+- Post Types Order
+- UpdraftPlus
+- WooCommerce
+- Yoast (WP-SEO)
+
+and any image optimization and/or caching plugin, unless your (managed) host already provides that functionality.
+
+Polylang is a proven plugin for multi-language localization, especially for small sites that might be fine using the free version.
+
+Contact Form 7, Updraft Plus, and W3 Total Cache are proven plugins that used to work well for small sites even without a paid pro license.
+
+WooCommerce is fine for a small shop that doesn't need much customization, otherwise you might want to consider alternatives that allow for more customization and performance optimization. Likewise, you should check out alternatives to other plugins suggested above.
+
 ### minimalism and best practices
 
 Adhere to WordPress best practices, apply minimal changes and prefer content and configuration over modification to avoid conflicting side effects of any future update!
@@ -34,18 +65,20 @@ Adhere to WordPress best practices, apply minimal changes and prefer content and
 
 ### Initial Setup
 
-Edit localhost ports and initial plugins in `install-local-environment.js` and `docker-compose.yml`,
-then run `npm install` and open http://localhost:8025/wp-admin (replace `8025` with the configured port) in your browser.
-Log in with the default demo credentials (user: `admin`, password: `secret`).
+Run 
+- `npm install` 
+- `docker compose up --build`
+- open http://localhost:8026/wp-admin (replace `8026` with the configured port) in your browser.
+- Log in with the default demo credentials (user: `admin`, password: `secret`).
 
 The following directories are mounted below the project root directory by default:
 
 - plugins
 - themes
-  - themes/twentytwentythree-child
+  - themes/twentytwentyfive-child
 - wp_data
 
-They are set to be ignored in `.gitignore`, except for `themes/twentytwentythree-child`.
+They are set to be ignored in `.gitignore`, except for the child themes.
 
 Check an edit your IDE settings to exclude or exclude these directories for search / indexing. Edit write permissions
 if necessary before editing the child theme, e.g.
@@ -58,6 +91,24 @@ sudo chmod -R ug+rw themes
 Likewise, we might have to explicitly allow uploads by clients:
 
 `sudo chmod -R ugo+rwx wp_data/uploads`
+
+Most warnings can be safely ignored, especially warnings about deprecations and vulnerabilities at development time, as we only ship minimal custom code, no keys or production passwords, and shouldn't normally be affected by any memory leaks due to the limited number of files and directory depth.
+
+#### Redirect Issue
+
+If you keep getting redirected to a wrong localhost port,
+- ensure that all ports are configured correctly in `docker-compose.yml`
+
+and try
+
+- shutting down the setup: `docker compose down -v`
+- optionally clean up any other docker related data
+- alternatively, try another browser as it might be a caching issue
+- try adding `/wp-admin` to prevent the frontend redirect
+
+#### WordPress Updates
+
+If there is a more recent WordPress version that in the `wordpress:latest` Docker image, you should be able to update the local system in your `wp-admin` dashboard.
 
 ### Start, Stop, Destroy
 
@@ -90,6 +141,16 @@ https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/
 https://fullsiteediting.com/lessons/theme-json-typography-options/#using-the-web-fonts-api-with-theme-json
 
 TODO: check for updated possibilities and best practices like WP font API
+
+Font choice: many commercial fonts have slightly similar alternatives that might be good enough for a startup with limited budget, like using Nunito instead of Avenir or Futura. Note that there are at least two different Nunito designs, so don't use the rounded one when looking for the classic (retro-)futuristic style.
+
+Popular pairings include Lora, Alegreya, Roboto and Open Sans. Noto is known as a minimalist sans-serif font that supports as many international languages as possible.
+
+Markazi Text is a free font found on Google Fonts useful for an elegant but readable Arabic business site. Roman letters have serifs and a similar overall appearance. Use the Aleppo Soap example product for a preview.
+
+Atkinson Hyperlegible might look a little too technical for marketing puropose, however it was designed for maximum legibility in the sense of accessibility and glyph disambiguation.
+
+The example theme uses a combination of Markazi and Nunito, the latter only used for second-level sub-headlines for the sake of demonstrating how to provide different default web fonts in a theme. 
 
 #### full site editing child themes
 
@@ -147,3 +208,9 @@ FROM wordpress:latest
 ### Technical Notes
 
 The `copyfiles` module causes a warning about its `inflight` dependency which is officially deprecated due to an alleged memory leak. However, for a small project like this with less than a hundred files in total in a handful of directories nested no deeper than three levels, the severity is likely minimal or negligible.
+
+## Preview (seriously, you should replace that image)
+
+![screenshot](themes/twentytwentyfive-child/screenshot.png)
+
+TODO: replace that ugly placeholder image with a beautiful screenshot of your actual theme!
