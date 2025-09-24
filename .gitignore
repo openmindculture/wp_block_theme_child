@@ -9,7 +9,7 @@ wordpress
 .idea
 .svn
 
-themes
-themes/
-!themes/twentytwentythree-child
-!themes/twentytwentyfive-child
+themes/twentytwentytwo
+themes/twentytwentythree
+themes/twentytwentyfour
+themes/twentytwentyfive
