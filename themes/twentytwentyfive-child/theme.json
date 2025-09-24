@@ -120,135 +120,143 @@
 							"fontFamily": "Atkinson Hyperlegible",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "400",
+							"fontWeight": "700",
 							"src": [
 								"file:./fonts/Atkinson-Hyperlegible-Bold-102a.woff2"
 							]
 						},
 						{
-							"fontFamily": "DM Sans",
+							"fontFamily": "Atkinson Hyperlegible",
+							"fontStretch": "normal",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2"
+							]
+						},
+						{
+							"fontFamily": "Atkinson Hyperlegible",
 							"fontStretch": "normal",
 							"fontStyle": "italic",
 							"fontWeight": "400",
 							"src": [
-								"file:./fonts/dm-sans/DMSans-Regular-Italic.woff2"
+								"file:./fonts/Atkinson-Hyperlegible-Italic-102a.woff2"
 							]
 						},
 						{
-							"fontFamily": "DM Sans",
+							"fontFamily": "Atkinson Hyperlegible",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./fonts/Atkinson-Hyperlegible-Regular-102a.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Atkinson Hyperlegible\", sans-serif",
+					"name": "Atkinson Hyperlegible",
+					"slug": "atkinson-hyperlegible"
+				},
+
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Markazi Text",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "700",
 							"src": [
-								"file:./assets/fonts/dm-sans/DMSans-Bold.woff2"
+								"file:./fonts/markazi-text-v28-arabic_latin_latin-ext-700.woff2"
 							]
 						},
 						{
-							"fontFamily": "DM Sans",
+							"fontFamily": "Markazi Text",
 							"fontStretch": "normal",
-							"fontStyle": "italic",
-							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontWeight": "400",
 							"src": [
-								"file:./assets/fonts/dm-sans/DMSans-Bold-Italic.woff2"
+								"file:./fonts/markazi-text-v28-arabic_latin_latin-ext-regular.woff2"
 							]
 						}
 					],
-					"fontFamily": "\"DM Sans\", sans-serif",
-					"name": "DM Sans",
-					"slug": "dm-sans"
+					"fontFamily": "\"Markazi Text\", serif",
+					"name": "Markazi Text",
+					"slug": "markazi-text"
 				},
+
 				{
 					"fontFace": [
 						{
-							"fontDisplay": "block",
-							"fontFamily": "IBM Plex Mono",
+							"fontFamily": "Nunito",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300",
 							"src": [
-								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Light.woff2"
+								"file:./fonts/Nunito-v26-latin-300.woff2"
 							]
 						},
 						{
-							"fontDisplay": "block",
-							"fontFamily": "IBM Plex Mono",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2"
-							]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "IBM Plex Mono",
-							"fontStretch": "normal",
-							"fontStyle": "italic",
-							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Italic.woff2"
-							]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "IBM Plex Mono",
+							"fontFamily": "Nunito",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "700",
 							"src": [
-								"file:./assets/fonts/ibm-plex-mono/IBMPlexMono-Bold.woff2"
+								"file:./fonts/Nunito-v26-latin-700.woff2"
 							]
 						}
 					],
-					"fontFamily": "'IBM Plex Mono', monospace",
-					"name": "IBM Plex Mono",
-					"slug": "ibm-plex-mono"
+					"fontFamily": "\"Nunito\", Avenir, Futura, Helvetica, sans-serif",
+					"name": "Nunito",
+					"slug": "nunito"
 				},
+
 				{
 					"fontFace": [
 						{
-							"fontFamily": "Inter",
+							"fontFamily": "Roboto Slab",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "200 900",
+							"fontWeight": "700",
 							"src": [
-								"file:./assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf"
+								"file:./fonts/roboto-slab-v34-latin_latin-ext-700.woff2"
+							]
+						},
+						{
+							"fontFamily": "Roboto Slab",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./fonts/roboto-slab-v34-latin_latin-ext-regular.woff2"
 							]
 						}
 					],
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
-					"slug": "inter"
+					"fontFamily": "\"Roboto Slab\", sans-serif",
+					"name": "Roboto Slab",
+					"slug": "roboto-slab"
 				},
+
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Roboto Slab Black",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": [
+								"file:./fonts/roboto-slab-black.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Roboto Slab Black\", \"Arial Black\" sans-serif",
+					"name": "Roboto Slab Black",
+					"slug": "roboto-slab-black"
+				},
+
 				{
 					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
-				},
-				{
-					"fontFace": [
-						{
-							"fontFamily": "Source Serif Pro",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "200 900",
-							"src": [
-								"file:./assets/fonts/source-serif-pro/SourceSerif4Variable-Roman.ttf.woff2"
-							]
-						},
-						{
-							"fontFamily": "Source Serif Pro",
-							"fontStretch": "normal",
-							"fontStyle": "italic",
-							"fontWeight": "200 900",
-							"src": [
-								"file:./assets/fonts/source-serif-pro/SourceSerif4Variable-Italic.ttf.woff2"
-							]
-						}
-					],
-					"fontFamily": "\"Source Serif Pro\", serif",
-					"name": "Source Serif Pro",
-					"slug": "source-serif-pro"
 				}
 			],
 			"fontSizes": [

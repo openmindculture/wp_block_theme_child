@@ -470,3 +470,6 @@ The `copyfiles` module causes a warning about its `inflight` dependency which is
 ![screenshot](themes/twentytwentyfive-child/screenshot.png)
 
 TODO: replace that ugly placeholder image with a beautiful screenshot of your actual theme!
+
+Please add the missing fontFamilies fontFace definitions for a WordPress theme JSON in the following format matching the list of font file names below
+
