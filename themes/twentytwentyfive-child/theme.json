@@ -235,7 +235,7 @@
 							]
 						}
 					],
-					"fontFamily": "\"Nunito\", Avenir, Futura, Helvetica, sans-serif",
+					"fontFamily": "\"Nunito\", \"Avenir\", \"Futura\", \"Helvetica\", sans-serif",
 					"name": "Nunito",
 					"slug": "nunito"
 				},

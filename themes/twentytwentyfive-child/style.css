@@ -14,5 +14,29 @@ Requires PHP: 7.2
 Version: 1.0.2025
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
 */
+
+body > .wp-site-blocks {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.wp-site-blocks header {
+    padding-top: var(--wp--style--root--padding-top);
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-block-site-title {
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-site-blocks header .is-content-justification-space-between > :last-child {
+    flex-basis: 100%;
+}
+
+.wp-site-blocks footer {
+    padding-bottom: var(--wp--style--root--padding-bottom);
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--primary);
+}

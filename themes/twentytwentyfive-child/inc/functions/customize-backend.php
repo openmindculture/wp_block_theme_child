@@ -71,9 +71,9 @@ if ( is_admin() ) {
       'core/search',
       'core/tag-cloud',
       /* theme */
-      'core/site-logo',
+      /* 'core/site-logo',
       'core/site-title',
-      'core/site-tagline',
+      'core/site-tagline', */
       'core/loginout',
       /* 'core/query', */
       /* 'core/query-loop', */
