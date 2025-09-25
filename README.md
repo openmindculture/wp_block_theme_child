@@ -409,6 +409,8 @@ Copy the existing theme.json to your downstream child theme repository, delete w
 
 See the detailed instructions and information about fonts, colors etc. in the section below.
 
+Using theme.json comes with certain problems, much like using Tailwind v3, but without good IDE support: arbitrary custom property variable names that are unknown to the IDE when used in `style.css` or imported components. Pragmatically, we might just write classic CSS and adjust the theme.json values so that content editors use the same colors and fonts, and to let WordPress create the necessary font definitions and make the theme load the expected files.
+
 ## Further Reading, Alternatives, and Known Issues
 
 ### References

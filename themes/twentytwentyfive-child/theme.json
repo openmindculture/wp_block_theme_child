@@ -55,49 +55,39 @@
 					"slug": "tertiary"
 				},
 				{
-					"color": "#030f63;",
+					"color": "#030f63",
 					"name": "dark midnight blue",
 					"slug": "dark-midnight-blue"
 				},
 				{
-					"color": "#191970;",
+					"color": "#191970",
 					"name": "midnight blue",
 					"slug": "midnight-blue"
 				},
 				{
-					"color": "#4b8402;",
+					"color": "#4b8402",
 					"name": "soft grass green",
 					"slug": "soft-grass-green"
 				},
 				{
-					"color": "#e50691;",
+					"color": "#e50691",
 					"name": "dark deep pink",
 					"slug": "dark-deep-pink"
 				},
 				{
-					"color": "#b80122;",
+					"color": "#b80122",
 					"name": "pinkish red alert",
 					"slug": "pinkish-red-alert"
 				},
 				{
-					"color": "#ffc0cb;",
+					"color": "#ffc0cb",
 					"name": "pale pink",
 					"slug": "pale-pink"
 				},
 				{
-					"color": "#ffe8b7;",
+					"color": "#ffe8b7",
 					"name": "sandy yellow",
 					"slug": "sandy-yellow"
-				},
-				{
-					"color": "#ffffff;",
-					"name": "white",
-					"slug": "white"
-				},
-				{
-					"color": "#000000;",
-					"name": "black",
-					"slug": "black"
 				}
 			]
 		},

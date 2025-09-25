@@ -23,7 +23,7 @@ if ( is_admin() ) {
     foreach ( custom_CUSTOM_BLOCK_TYPES as $block_type ) {
       wp_enqueue_script_module(
         'custom_admin_script_register_block_' . $block_type,
-        get_template_directory_uri() . '/blocks/' . $block_type . '/' . $block_type . '.js',
+          get_stylesheet_directory_uri() . '/blocks/' . $block_type . '/' . $block_type . '.js',
         array( 'wp-blocks' ),
         wp_get_theme()->get('Version')
       );
@@ -85,11 +85,11 @@ if ( is_admin() ) {
       'core/post-excerpt',
       'core/post-featured-image',
       'core/post-content',
-      'core/post-author',
+      'core/post-author',  */
       'core/post-author-biography',
-      'core/post-author-name',
-      'core/post-date',
-      'core/post-modified-date', */
+        /* 'core/post-author-name',
+        'core/post-date',
+        'core/post-modified-date', */
       'core/post-categories',
       'core/post-tags',
       'core/pagination',
