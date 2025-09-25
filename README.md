@@ -411,6 +411,12 @@ See the detailed instructions and information about fonts, colors etc. in the se
 
 Using theme.json comes with certain problems, much like using Tailwind v3, but without good IDE support: arbitrary custom property variable names that are unknown to the IDE when used in `style.css` or imported components. Pragmatically, we might just write classic CSS and adjust the theme.json values so that content editors use the same colors and fonts, and to let WordPress create the necessary font definitions and make the theme load the expected files.
 
+#### redundant preview values
+
+An optional `_variables_preview.css` file only serves the purpose to expose theme.json colors and settings redundantly for better preview, autocompletion and to prevent unresolved var() errors at development time, while it is not loaded and used in the frontend.
+
+This preview style file can have any arbitrary name or location parallel to or above the theme's stylecss to be recognized by most coding editors.
+
 ## Further Reading, Alternatives, and Known Issues
 
 ### References
