@@ -417,6 +417,16 @@ An optional `_variables_preview.css` file only serves the purpose to expose them
 
 This preview style file can have any arbitrary name or location parallel to or above the theme's stylecss to be recognized by most coding editors.
 
+#### explicit font family utility classes
+
+Font family utility classes might only be generated on demand, so as a workaround, we can define them manually if necessary, e.g. 
+    
+```css
+  .has-font-family-nunito {
+      font-family: var(--wp--preset--font-family--nunito);
+  }
+```
+
 ## Further Reading, Alternatives, and Known Issues
 
 ### References

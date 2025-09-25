@@ -17,11 +17,20 @@
     --wp--preset--color--pale-pink: #ffc0cb;
     --wp--preset--color--sandy-yellow: #ffe8b7;
 
-    /* ^ Adjust the colors above to the theme.json palette for a proper editor preview! */
+    /* Adjust the colors above to the theme.json palette for a proper editor preview!
+     * Auto-generated class names follow the pattern .has-{preset-slug}-{preset-category}
+     * e.g.
+    */
+
+    .has-base-color {
+        color: var(--wp--preset--color--base);
+    }
+
     /* You might use arbitrary values below just to ensure the properties are not undefined */
 
     --wp--preset--font-family--atkinson-hyperlegible: "Atkinson Hyperlegible", sans-serif;
     --wp--preset--font-family--markazi-text: "Markazi Text", serif;
+    --wp--preset--font-family--manrope: "Manrope", sans-serif;
     --wp--preset--font-family--nunito: "Nunito", "Avenir", "Futura", "Helvetica", sans-serif;
     --wp--preset--font-family--roboto-slab: "Roboto Slab", sans-serif;
     --wp--preset--font-family--roboto-slab-black: "Roboto Slab Black", "Arial Black", sans-serif;

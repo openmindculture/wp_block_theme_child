@@ -40,3 +40,29 @@ body > .wp-site-blocks {
     background-color: var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--primary);
 }
+
+/* global font family utility class names workaround */
+.has-font-family-atkinson-hyperlegible {
+    font-family: var(--wp--preset--font-family--atkinson-hyperlegible);
+}
+
+.has-font-family-markazi-text {
+    font-family: var(--wp--preset--font-family--markazi-text);
+}
+
+.has-font-family-manrope {
+    font-family: var(--wp--preset--font-family--manrope);
+}
+
+.--wp--preset--font-family--nunito {
+    font-family: var(--wp--preset--font-family--nunito);
+}
+
+.has-font-family-roboto-slab {
+    font-family: var(--wp--preset--font-family--roboto-slab);
+}
+
+.has-font-family-roboto-slab-black {
+    font-family: var(--wp--preset--font-family--roboto-slab-black);
+}
+

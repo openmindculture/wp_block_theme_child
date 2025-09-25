@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"version": 3,
 	"customTemplates": [
 		{
 			"name": "blank",
@@ -89,7 +89,13 @@
 					"name": "sandy yellow",
 					"slug": "sandy-yellow"
 				}
-			]
+			],
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"gradients": []
 		},
 		"layout": {
 			"contentSize": "650px",
@@ -212,6 +218,32 @@
 					"fontFamily": "\"Markazi Text\", serif",
 					"name": "Markazi Text",
 					"slug": "markazi-text"
+				},
+
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Manrope",
+							"fontStyle": "auto",
+							"fontWeight": "300 900",
+							"fontVariationSettings": "'MONO' 0, 'CRSV' 0, 'CASL' 0, 'slnt' 0",
+							"src": [
+								"file:./fonts/manrope-v20-cyrillic_latin_latin-ext-regular.woff2"
+							]
+						},
+						{
+							"fontFamily": "Manrope",
+							"fontStyle": "italic",
+							"fontWeight": "300 900",
+							"fontVariationSettings": "'MONO' 0, 'CRSV' 0, 'CASL' 0, 'slnt' -14",
+							"src": [
+								"file:./fonts/manrope-v20-cyrillic_latin_latin-ext-regular.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Manrope\", sans-serif",
+					"name": "Manrope (Variable)",
+					"slug": "manrope"
 				},
 
 				{
