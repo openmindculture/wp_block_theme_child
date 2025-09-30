@@ -10,7 +10,7 @@
     "open": "open-cli http://localhost:8026/",
     "stop": "docker compose stop",
     "destroy": "docker-compose down -v",
-    "eslint": "eslint --ext .js src",
+    "eslint": "eslint --ext .js src"
   },
   "dependencies": {
     "docker-compose": "^1.3.0",
