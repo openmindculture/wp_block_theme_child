@@ -1,0 +1,93 @@
+/*
+Theme Name: Twenty Twenty-Five Child
+Todo: ^ rename to custom name
+Theme URI: https://github.com/openmindculture/wp_block_theme_child
+Text Domain: twentytwentyfive-child
+Comment: ^ do NOT rename the Text Domain! (This line should be removed)
+Template: twentytwentyfive
+Author: @openmindculture
+Author URI: https://www.ingo-steinke.com/
+Description: Twenty Twenty-Five Child supports the WordPress template engine (theme.json), block editor and full-site editing.
+Requires at least: 6.1
+Tested up to: 6.8.2
+Requires PHP: 7.2
+Version: 1.0.2025
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+:root {
+    --wp--preset--font-size--11pt: 0.88rem;
+    --wp--preset--font-size--13pt: 1.06rem;
+    --wp--preset--font-size--17pt: 1.38rem;
+}
+
+body, p {
+    color: var(--wp--preset--color--contrast);
+    font-family: var(--wp--preset--font-family--manrope);
+    font-size: var(--wp--preset--font-size--11pt);
+    font-weight: 400; /* 400 regular normal */
+}
+
+body > .wp-site-blocks {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.wp-site-blocks header {
+    padding-top: var(--wp--style--root--padding-top);
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-block-site-title {
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-site-blocks header .is-content-justification-space-between > :last-child {
+    flex-basis: 100%;
+}
+
+.wp-site-blocks footer {
+    padding-bottom: var(--wp--style--root--padding-bottom);
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--primary);
+}
+
+h1, body h1  {
+    color: var(--wp--preset--color--secondary);
+    font-family: var(--wp--preset--font-family--manrope);
+    font-size: var(--wp--preset--font-size--17pt);
+    font-weight: 500; /* medium */
+}
+
+h2, body h2  {
+    font-family: var(--wp--preset--font-family--manrope);
+    font-size: var(--wp--preset--font-size--13pt);
+    font-weight: 500; /* medium */
+}
+
+/* global font family utility class names workaround */
+.has-font-family-atkinson-hyperlegible {
+    font-family: var(--wp--preset--font-family--atkinson-hyperlegible);
+}
+
+.has-font-family-markazi-text {
+    font-family: var(--wp--preset--font-family--markazi-text);
+}
+
+.has-font-family-manrope {
+    font-family: var(--wp--preset--font-family--manrope);
+}
+
+.--wp--preset--font-family--nunito {
+    font-family: var(--wp--preset--font-family--nunito);
+}
+
+.has-font-family-roboto-slab {
+    font-family: var(--wp--preset--font-family--roboto-slab);
+}
+
+.has-font-family-roboto-slab-black {
+    font-family: var(--wp--preset--font-family--roboto-slab-black);
+}
