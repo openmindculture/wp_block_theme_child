@@ -91,3 +91,11 @@ h2, body h2  {
 .has-font-family-roboto-slab-black {
     font-family: var(--wp--preset--font-family--roboto-slab-black);
 }
+
+.hidden,
+.initially-hidden,
+.visually-hidden,
+.hidden-fields-container,
+.wpcf7 .hidden-fields-container {
+    display: none;
+}
