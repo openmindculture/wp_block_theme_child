@@ -14,6 +14,14 @@ add_action('after_setup_theme', function () {
   remove_action('wp_head', 'feed_links_extra', 3 );
   add_theme_support('disable-custom-font-sizes');
   add_theme_support('disable-custom-gradients');
+
+  // remove the lines below to enable full-site editing header/footer templates in the block editor
+  remove_theme_support('block-templates');
+  remove_theme_support('block-template-parts');
+  remove_theme_support( 'custom-header' );
+  register_nav_menus(array(
+    'primary' => __('Primary Navigation Menu', 'twentytwentyfive-child'),
+  ));
 }, 10, 0);
 
 // remove category slug from single post urls e.g. /category/blog/foo => /blog/foo

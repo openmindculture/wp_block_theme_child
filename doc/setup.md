@@ -16,6 +16,17 @@ For added security, you can also password-protect your staging environment or ad
 
 This is an unfinished stub, based on `wp_cli_docker` (see below). Ideas and learning takeaways from other (open source) projects should be ported back to and collected in this repository.
 
+### Synchronizing with Upstream Source Code
+
+You probably don't want to synchronize incoming changes too often to prevent resolving unnecessary "conflicts" in git due to minor changes in the upstream source code. To merge incoming upstream changes into your project code, type
+
+```
+git fetch upstream
+git merge origin/main --allow-unrelated-histories
+```
+
+If you want to synchronize fixes and improvements back up, feel free to open a pull request / merge request / issue in the upstream repository.
+
 ## White Label / Template Customization
 
 ### zip and ship
