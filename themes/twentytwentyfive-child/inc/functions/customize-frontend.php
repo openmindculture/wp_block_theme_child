@@ -19,6 +19,7 @@ add_action('after_setup_theme', function () {
   remove_theme_support('block-templates');
   remove_theme_support('block-template-parts');
   remove_theme_support( 'custom-header' );
+
   register_nav_menus(array(
     'primary' => __('Primary Navigation Menu', 'twentytwentyfive-child'),
   ));

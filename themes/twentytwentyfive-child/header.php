@@ -21,13 +21,13 @@
             </div>
             <div class="site-navigation wp-block-group alignwide">
                 <nav>
-					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'primary',
-						'fallback_cb' => false,
-						'container' => false,
-					));
-					?>
+	                <?php
+	                wp_list_pages(array(
+		                'title_li'    => '',
+		                'sort_column' => 'menu_order, post_title',
+		                'depth'       => 0,
+	                ));
+	                ?>
                 </nav>
             </div>
         </div>
