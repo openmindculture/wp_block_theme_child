@@ -92,6 +92,33 @@ h2, body h2  {
     font-family: var(--wp--preset--font-family--roboto-slab-black);
 }
 
+main,
+.alignwide {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.is-horizontal ul {
+    flex-direction: row;
+    display: flex;
+    gap: 1rem;
+}
+
+.wp-block-navigation ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.wp-block-navigation ul li a {
+    text-decoration: none;
+}
+
 .hidden,
 .initially-hidden,
 .visually-hidden,
