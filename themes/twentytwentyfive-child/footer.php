@@ -1,5 +1,5 @@
 <footer>
-    <div class="custom-footer-inner wp-block-group alignwide">
+    <div class="site-footer-inner wp-block-group alignwide">
         <div class="wp-block-group alignfull">
             <div class="wp-block-columns is-layout-flex">
                 <span class="footer-copyright">&copy; <?php echo date("Y"); ?></span>

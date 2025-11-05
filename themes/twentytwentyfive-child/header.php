@@ -6,8 +6,8 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header id="masthead" class="site-header">
-    <div class="site-header-inner wp-block-group alignfull"><!-- wp:group {"layout":{"type":"constrained"}} -->
-        <div class="site-header-row wp-block-group">
+    <div class="site-header-inner wp-block-group alignfull">
+        <div class="site-header-row is-layout-flex wp-block-group">
             <div class="site-branding wp-block-group alignwide">
                 <div class="wrap">
                     <a href="<?php
@@ -21,13 +21,17 @@
             </div>
             <div class="site-navigation wp-block-group alignwide">
                 <nav>
-	                <?php
-	                wp_list_pages(array(
-		                'title_li'    => '',
-		                'sort_column' => 'menu_order, post_title',
-		                'depth'       => 0,
-	                ));
-	                ?>
+                    <ul>
+						<?php
+						wp_list_pages(array(
+							'title_li'    => '',
+							'sort_column' => 'menu_order',
+							'post_type'   => 'page',
+							'post_status' => 'publish',
+							'depth'       => 0,
+						));
+						?>
+                    </ul>
                 </nav>
             </div>
         </div>
