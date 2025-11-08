@@ -65,6 +65,10 @@ and avoid unnecessarily editing existing files in the upstream template reposito
 
 You can change the display name and screenshot to make the theme appear as an individual customer theme, while the technical name (textdomain) stays twentytwentyfive-child making it a child theme of the official WordPress theme Twenty Twenty-Five.
 
+#### customize navigation
+
+This child theme template has a classic navigation menu in the `header.php` using `wp_list_pages` which can be customized and filtered accordingly. To exclude pages linked in the footer, like imprint and privacy, from the header navigation menu, you can add known page id values to the `exclude` parameter or add another custom include/exclude logic.
+
 ### multiple inheritance, sort of
 
 Effectively, you will have two upstreams providing you with updates: twentytwentyfive (at run time via WordPress updates) and this template respository, `wp_block_theme_child`, only when you chose to check and pull updates into your forked/downstream version.

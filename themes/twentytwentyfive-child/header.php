@@ -36,7 +36,8 @@
 							'sort_column' => 'menu_order',
 							'post_type'   => 'page',
 							'post_status' => 'publish',
-							'depth'       => 0,
+                            'exclude'     => '', /* Comma-separated list of page IDs to exclude. */
+							'depth'       => 0,  /* 0 (zero) means unlimited depth */
 						));
 						?>
                     </ul>
