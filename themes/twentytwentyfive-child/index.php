@@ -6,7 +6,7 @@ if (have_posts()):
     <main class="site-main wp-block-group" id="site-main">
         <div class="wp-block-group alignfull">
             <h1 class="site-main-title"><?php echo the_title() ?></h1>
-			<?php echo get_the_post_thumbnail( get_the_ID(), 'full' );  ?>
+			<?php /* echo get_the_post_thumbnail( get_the_ID(), 'full' ); */  ?>
             <div class="custom-content-wrapper alignfull is-layout-constrained">
 				<?php the_content(); ?>
             </div>
