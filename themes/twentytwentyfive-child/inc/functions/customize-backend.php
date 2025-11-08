@@ -101,12 +101,22 @@ if ( is_admin() ) {
       'core/term-description',
       'core/template-part',
       'query-title/archive-title',
-      /* embed */
-      'core/embed',
-      'core/twitter-embed',
-      'core/wordpress-tv-embed',
-      'core/bluesky-embed',
-      'core/facebook-embed'
+	    /* embed */
+	    /* 'core/embed', */
+	    'core/embed/animoto',
+	    'core/embed/amazon-kindle',
+	    'core/embed/imgur',
+	    'core/embed/kickstarter',
+	    'core/embed/pocket-casts',
+	    'core/embed/reddit',
+	    'core/embed/reverbnation',
+	    'core/embed/smugmug',
+	    'core/embed/tumblr',
+	    'core/embed/pinterest',
+	    'core/embed/twitter',
+	    'core/twitter-embed',
+	    'core/wordpress-tv-embed',
+	    'core/facebook-embed'
     );
     foreach ( $allowed_block_types as $block_type ) {
       if ( !in_array( $block_type, $disallowed_block_types ) ) {
