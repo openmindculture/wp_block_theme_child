@@ -28,6 +28,17 @@ add_action('after_setup_theme', function () {
 // remove category slug from single post urls e.g. /category/blog/foo => /blog/foo
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
+add_filter( 'the_title', function ( $title, $post_id ) {
+	// TODO restrict further if necessary
+	if (!in_the_loop() && !is_admin()) {
+		$short_title = get_post_meta($post_id, 'short_title', true);
+		if (!empty($short_title)) {
+			return esc_html($short_title);
+		}
+	}
+	return $title;
+}, 10, 2 );
+
 add_action( 'wp_print_styles', function() {
   wp_styles()->add_data( 'akismet-widget-style', 'after', '' );
 });

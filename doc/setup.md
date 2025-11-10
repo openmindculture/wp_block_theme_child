@@ -65,6 +65,12 @@ and avoid unnecessarily editing existing files in the upstream template reposito
 
 You can change the display name and screenshot to make the theme appear as an individual customer theme, while the technical name (textdomain) stays twentytwentyfive-child making it a child theme of the official WordPress theme Twenty Twenty-Five.
 
+#### pages with optional short menu title
+
+Use the built-in WordPress core functionality: open the triple-dot-menu when editing a page in the block editor, enable custom fields (individual fields) in preferences -> panels (Voreinstellungen -> Allgemein -> Erweitert in German). Then add a custom field called `short_title` in the custom fields section below the block editor.
+
+When a short title is present, this will be used in the navigation menu, while the regular (long) title will always be used in `<html><head><title>` and `<h1>` headline of each page.
+
 #### customize navigation
 
 This child theme template has a classic navigation menu in the `header.php` using `wp_list_pages` which can be customized and filtered accordingly. To exclude pages linked in the footer, like imprint and privacy, from the header navigation menu, you can add known page id values to the `exclude` parameter or add another custom include/exclude logic.
