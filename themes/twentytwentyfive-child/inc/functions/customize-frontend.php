@@ -28,6 +28,7 @@ add_action('after_setup_theme', function () {
 // remove category slug from single post urls e.g. /category/blog/foo => /blog/foo
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
+// use short_title in navigation if set
 add_filter( 'the_title', function ( $title, $post_id ) {
 	// TODO restrict further if necessary
 	if (!in_the_loop() && !is_admin()) {
@@ -38,6 +39,27 @@ add_filter( 'the_title', function ( $title, $post_id ) {
 	}
 	return $title;
 }, 10, 2 );
+
+// Add Short Title column to Pages list
+add_filter('manage_pages_columns', function ($columns) {
+	// Insert after the title column
+	$new_columns = array();
+	foreach ($columns as $key => $value) {
+		$new_columns[$key] = $value;
+		if ($key == 'title') {
+			$new_columns['short_title'] = 'Short Title';
+		}
+	}
+	return $new_columns;
+});
+
+// Populate the Short Title column
+add_action('manage_pages_custom_column', function ($column_name, $post_id) {
+	if ($column_name == 'short_title') {
+		$short_title = get_post_meta($post_id, 'short_title', true);
+		echo $short_title ? esc_html($short_title) : '—';
+	}
+}, 10, 2);
 
 add_action( 'wp_print_styles', function() {
   wp_styles()->add_data( 'akismet-widget-style', 'after', '' );
