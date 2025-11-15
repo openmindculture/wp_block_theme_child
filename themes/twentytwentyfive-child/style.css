@@ -37,7 +37,8 @@ b, strong {
 
 body {
     display: flex;
-    min-height: 100vh;
+    /* keep footer visible at the bottom (adjust to heights and spacing) */
+    min-height: calc(100vh - 3rem);
     flex-direction: column;
 }
 
@@ -171,6 +172,19 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+header nav > ul > li:hover,
+header nav > ul > li:hover > a,
+header nav > ul > li:focus,
+header nav > ul > li:focus > a,
+header nav ul li ul li:hover,
+header nav ul li ul li:hover a,
+header nav ul li ul li:focus,
+header nav ul li ul li:focus a {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+    text-decoration: none;
+}
+
 /* Dropdown styles */
 nav ul ul {
     display: none;
@@ -182,7 +196,7 @@ nav ul ul {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     min-width: 200px;
     z-index: 1000;
-    padding: 0.5rem;
+    padding: 0.5rem 0 0.5rem 0;
     gap: 0;
 }
 
