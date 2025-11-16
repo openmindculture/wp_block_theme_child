@@ -22,9 +22,27 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
     --wp--preset--font-size--17pt: 1.38rem;
 }
 
-html, body {
+/* reset parent theme defaults
+ * DON'T DO THAT! Keep fluid typography instead!
+ * don't change typography mode in a child theme
+ */
+/* html, body {
     font-size: 100%;
-}
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+@media (max-width: 992px) and (hover:none) {
+    html, body, body p, main ul {
+        font-size: 160%
+    }
+    body h2,
+    :root :where(.is-layout-constrained) > h2 {
+        font-size: 162% !important;
+        margin-top: 3rem !important;
+    }
+} */
 
 body, p {
     background-color: var(--wp--preset--color--base);
@@ -76,12 +94,16 @@ img {
     img {
         max-width: 100%;
     }
+    .wp-block-image img {
+        width: 100%;
+    }
     body {
         max-width: 100%;
         overflow-x: hidden;
-
+        overflow-wrap: break-word;
     }
     main {
+        max-width: calc(100% - 2rem);
         padding-left: 1rem;
         padding-right: 1rem;
     }
