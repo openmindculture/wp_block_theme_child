@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+    <title><?php the_title() ?></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
     <script src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/js/scripts.js"></script>
 </head>

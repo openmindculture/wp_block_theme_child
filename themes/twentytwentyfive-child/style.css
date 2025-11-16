@@ -154,6 +154,10 @@ img {
     }
 }
 
+body.is-menu-open {
+    position: fixed;
+}
+
 body > * {
     padding-top: 0;
     padding-bottom: 0;
@@ -251,6 +255,9 @@ nav ul li.page_item_has_children > a::after {
 }
 
 @media (max-width: 992px) {
+    nav {
+        min-height: 100%;
+    }
     nav ul ul {
         position: relative;
         display: block;
