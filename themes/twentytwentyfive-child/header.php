@@ -45,9 +45,9 @@
                 <a id="site-navigation-menu-link" class="site-navigation-menu-link" href="#navigation-menu">
                     <svg width="57" height="50" viewBox="0 0 57 50" xmlns="http://www.w3.org/2000/svg"><title>Menü öffnen</title>
                         <g fill="currentColor">
-                            <rect width="57" height="3" x="0" y="0"/>
-                            <rect width="57" height="3" x="0" y="12"/>
-                            <rect width="57" height="3" x="0" y="24"/>
+                            <rect width="50" height="3" x="0" y="0"/>
+                            <rect width="50" height="3" x="0" y="12"/>
+                            <rect width="50" height="3" x="0" y="24"/>
                         </g>
                     </svg>
                 </a>
