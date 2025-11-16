@@ -22,6 +22,10 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
     --wp--preset--font-size--17pt: 1.38rem;
 }
 
+html, body {
+    font-size: 100%;
+}
+
 body, p {
     background-color: var(--wp--preset--color--base);
     color: var(--wp--preset--color--contrast);
