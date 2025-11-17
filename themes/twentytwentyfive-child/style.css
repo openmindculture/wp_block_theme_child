@@ -16,33 +16,18 @@ License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
 
+/* DON'T enable W3 Total Cache CSS minify when using @import here! */
+@import url("blocks/custom-card/custom-card.css");
+
 :root {
     --wp--preset--font-size--11pt: 0.88rem;
     --wp--preset--font-size--13pt: 1.06rem;
     --wp--preset--font-size--17pt: 1.38rem;
 }
 
-/* reset parent theme defaults
- * DON'T DO THAT! Keep fluid typography instead!
- * don't change typography mode in a child theme
- */
-/* html, body {
+html, body {
     font-size: 100%;
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-  }
-
-@media (max-width: 992px) and (hover:none) {
-    html, body, body p, main ul {
-        font-size: 160%
-    }
-    body h2,
-    :root :where(.is-layout-constrained) > h2 {
-        font-size: 162% !important;
-        margin-top: 3rem !important;
-    }
-} */
+}
 
 body, p {
     background-color: var(--wp--preset--color--base);
