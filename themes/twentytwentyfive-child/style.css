@@ -6,14 +6,13 @@ Text Domain: twentytwentyfive-child
 Comment: ^ do NOT rename the Text Domain! (This line should be removed)
 Template: twentytwentyfive
 Author: @openmindculture
-Author URI: https://www.ingo-steinke.com/
-Description: Twenty Twenty-Five Child supports the WordPress template engine (theme.json), block editor and full-site editing.
+Author URI: https://www.ingo-steinke.de/
+Description: Twenty Twenty-Five Child supports the WordPress template engine (theme.json) and Gutenberg block editor
 Requires at least: 6.1
-Tested up to: 6.8.3
-Requires PHP: 7.2
-Version: 1.0.2025
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Tested up to: 6.9
+Requires PHP: 7.4
+Version: 1.1.2026
+License: proprietary
 */
 
 /* DON'T enable W3 Total Cache CSS minify when using @import here! */
@@ -376,4 +375,23 @@ details[open] summary {
     font: inherit;
     color: inherit;
     cursor: pointer;
+}
+
+/* hide misleading full-site editing option ("Website bearbeiten") in admin bar */
+
+#wp-admin-bar-site-editor {
+    display: none;
+}
+
+/* facilitate preview and testing */
+
+#wpadminbar {
+    opacity: 0.25;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+#wpadminbar:hover {
+    opacity: 1;
+    z-index: 100;
 }

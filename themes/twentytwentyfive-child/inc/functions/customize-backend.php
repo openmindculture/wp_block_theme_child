@@ -40,82 +40,72 @@ if ( is_admin() ) {
     /* https://wordpress.org/documentation/article/blocks-list/ */
     $theme_allowed_block_types = array();
     $disallowed_block_types = array(
-      /* text */
-      'core/classic',
-      'core/code',
-      'core/details',
-      'core/freeform',
-      'core/preformatted',
-      'core/quote',
-      'core/verse',
-      /* media */
-      'core/audio',
-      'core/cover',
-      'core/gallery',
-      'core/media-text',
-      /* design */
-      'core/more',
-      'core/nextpage',
-      'core/page-break',
-      'core/separator',
-      'group/group-grid',
-      /* widgets */
-      'core/archives',
-      'core/calendar',
-      'core/categories',
-      'core/latest-comments',
-      /* 'core/latest-posts', */
-      'core/page-list',
-      'core/rss',
-      'core/search',
-      'core/search',
-      'core/tag-cloud',
-      /* theme */
-      /* 'core/site-logo',
-      'core/site-title',
-      'core/site-tagline', */
-      'core/loginout',
-      /* 'core/query', */
-      /* 'core/query-loop', */
-      'post-terms/category',
-      'post-terms/post_tag',
-      'core/navigation',
-      'core/post-template',
-      /* 'core/post-title',
-      'core/post-excerpt',
-      'core/post-featured-image',
-      'core/post-content',
-      'core/post-author',  */
-      'core/post-author-biography',
-        /* 'core/post-author-name',
-        'core/post-date',
-        'core/post-modified-date', */
-      'core/post-categories',
-      'core/post-tags',
-      'core/pagination',
-      'core/posts-list',
-      'core/avatar',
-      'core/read-more',
-      'core/comments',
-      'core/post-comments-form',
-      'core/term-description',
-      'core/template-part',
-      'query-title/archive-title',
+	    /* text */
+	    'core/classic',
+	    'core/code',
+	    /* 'core/details', generic read-more accordion */
+	    'core/freeform',
+	    'core/preformatted',
+	    'core/quote',
+	    'core/verse',
+	    /* media */
+	    'core/audio',
+	    'core/cover',
+	    'core/gallery',
+	    'core/media-text',
+	    /* design */
+	    'core/more',
+	    'core/nextpage',
+	    'core/page-break',
+	    'core/separator',
+	    'group/group-grid',
+	    /* widgets */
+	    'core/archives',
+	    'core/calendar',
+	    'core/categories',
+	    'core/latest-comments',
+	    /* 'core/latest-posts', */
+	    'core/page-list',
+	    'core/rss',
+	    'core/search',
+	    'core/search',
+	    'core/tag-cloud',
+	    /* theme */
+	    /* 'core/site-logo',
+		'core/site-title',
+		'core/site-tagline', */
+	    'core/loginout',
+	    /* 'core/query', */
+	    /* 'core/query-loop', */
+	    'post-terms/category',
+	    'post-terms/post_tag',
+	    'core/navigation',
+	    'core/post-template',
+	    /* 'core/post-title',
+		'core/post-excerpt',
+		'core/post-featured-image',
+		'core/post-content',
+		'core/post-author',  */
+	    'core/post-author-biography',
+	    /* 'core/post-author-name',
+		'core/post-date',
+		'core/post-modified-date', */
+	    'core/post-categories',
+	    'core/post-tags',
+	    'core/pagination',
+	    'core/posts-list',
+	    'core/avatar',
+	    'core/read-more',
+	    'core/comments',
+	    'core/post-comments-form',
+	    'core/term-description',
+	    'core/template-part',
+	    'query-title/archive-title',
 	    /* embed */
-	    /* 'core/embed', */
-	    'core/embed/animoto',
-	    'core/embed/amazon-kindle',
-	    'core/embed/imgur',
-	    'core/embed/kickstarter',
-	    'core/embed/pocket-casts',
-	    'core/embed/reddit',
-	    'core/embed/reverbnation',
-	    'core/embed/smugmug',
-	    'core/embed/tumblr',
-	    'core/embed/pinterest',
-	    'core/embed/twitter',
+	    'core/embed',
 	    'core/twitter-embed',
 	    'core/wordpress-tv-embed',
+	    'core/bluesky-embed',
 	    'core/facebook-embed'
     );
     foreach ( $allowed_block_types as $block_type ) {
