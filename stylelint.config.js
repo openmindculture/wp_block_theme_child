@@ -14,6 +14,7 @@ export default {
     'font-family-name-quotes': null,
     'media-feature-range-notation': null,
     'no-descending-specificity': null,
+    'property-no-unknown': true,
     'property-no-vendor-prefix': null,
     'rule-empty-line-before': null,
     'selector-class-pattern': null,
