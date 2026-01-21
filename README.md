@@ -39,3 +39,16 @@ theme using the template engine (`theme.json`), block editor and full-site editi
 - zip and ship theme folder
 
 see [doc/setup.md](doc/setup.md)
+
+### Preview/Staging and going live
+
+- preview system always `noindex`
+- preview system always password protected (see `/demoserver`)
+- _unless_ while restoring a backup to production
+- wipe obsolete preview servers, return 410 gone status (see `/410_gone`)
+
+### Production Server Requirements
+- PHP 8.4+
+- MySQL or MariaDB
+- 1+ domain name
+- ssh or (s)ftp or one-click WordPress installer
