@@ -2,6 +2,8 @@
 
 WordPress block theme child is a WordPress child theme template for a classic/hybrid theme using the Gutenberg block editor but no full site editing, so that we can control our HTML head, page header, and page footer markup in PHP without the need for custom blocks or block variations, and no need to conform to the Gutenberg markup syntax.
 
+![screenshot](themes/twentytwentyfive-child/screenshot.png)
+
 ## The Theme's Technological Basis
 
 The current template defines a Twenty Twenty-Five child theme, based on the official WordPress twentytwentyfive default theme. We might want to change this to a Twenty Twenty-Six child theme in 2026 or 2027. A previous template version was based on Twenty Twenty-Three, following a similar concept.
