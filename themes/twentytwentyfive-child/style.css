@@ -65,8 +65,7 @@ main,
 /* ensure layout for pages with little content */
 main,
 main .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
-.editor-styles-wrapper > .is-root-container.is-layout-constrained.block-editor-block-list__layout
-{
+.editor-styles-wrapper > .is-root-container.is-layout-constrained.block-editor-block-list__layout {
     min-width: min(calc(100vw - 2rem), 992px);
 }
 
@@ -79,34 +78,42 @@ img {
     img {
         max-width: 100%;
     }
+
     .wp-block-image img {
         width: 100%;
     }
+
     body {
         max-width: 100%;
         overflow-x: hidden;
         overflow-wrap: break-word;
     }
+
     main {
         max-width: calc(100% - 2rem);
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
     header .site-navigation-menu-link {
         position: absolute;
         top: 1rem;
         right: 1rem;
     }
+
     header .navigation-menu {
         display: none;
     }
+
     header .navigation-menu.active,
     header .navigation-menu:target {
         display: block;
     }
+
     header .navigation-menu:target + .site-navigation-menu-link {
         display: none;
     }
+
     header nav {
         position: absolute;
         top: 0;
@@ -115,9 +122,11 @@ img {
         background-color: var(--wp--preset--color--base);
         z-index: 1;
     }
+
     header nav ul {
         flex-direction: column;
     }
+
     header .site-navigation-menu-close {
         font-size: 2rem;
         text-decoration: none;
@@ -131,9 +140,11 @@ img {
     header .site-navigation-menu-link {
         display: none;
     }
+
     header .site-header-row .site-navigation {
         flex-basis: 100%;
     }
+
     header .site-navigation-menu-link {
         display: none;
     }
@@ -243,11 +254,13 @@ nav ul li.page_item_has_children > a::after {
     nav {
         min-height: 100%;
     }
+
     nav ul ul {
         position: relative;
         display: block;
         box-shadow: none;
     }
+
     nav ul li.page_item_has_children > a::after {
         content: none;
         display: none;
@@ -260,14 +273,14 @@ footer {
     color: var(--wp--preset--color--base);
 }
 
-h1, body h1, :root :where(.is-layout-constrained) > h1  {
+h1, body h1, :root :where(.is-layout-constrained) > h1 {
     color: var(--wp--preset--color--secondary);
     font-family: var(--wp--preset--font-family--manrope);
     font-size: var(--wp--preset--font-size--17pt);
     font-weight: 500; /* medium */
 }
 
-h2, body h2, :root :where(.is-layout-constrained) > h2  {
+h2, body h2, :root :where(.is-layout-constrained) > h2 {
     font-family: var(--wp--preset--font-family--manrope);
     font-size: var(--wp--preset--font-size--13pt);
     font-weight: 500; /* medium */
@@ -324,4 +337,43 @@ h2, body h2, :root :where(.is-layout-constrained) > h2  {
 .hidden-fields-container,
 .wpcf7 .hidden-fields-container {
     display: none;
+}
+
+.initially-hidden:target {
+    display: block;
+}
+
+details summary {
+    list-style: none;
+}
+
+details summary::marker,
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+@keyframes details-show {
+    from {
+        opacity: 0;
+        transform: translateY(-0.5em);
+    }
+}
+
+details[open] > *:not(summary),
+details[close] > *:not(summary) {
+    animation: details-show 1000ms ease-in-out;
+}
+
+details[open] summary {
+    display: none;
+}
+
+.wp-block-details-close {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
 }

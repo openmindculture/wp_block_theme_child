@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    const detailsBlocksCloseButtons = document.querySelectorAll('details .wp-block-details-close');
+    for (const closeButton of detailsBlocksCloseButtons) {
+        closeButton.addEventListener('click', () => {
+            closeButton.closest('details').removeAttribute('open');
+        })
+    }
+
     if (navigator.clipboard && location.origin) {
         const copyTriggers = document.querySelectorAll('.copy-link-location');
         console.log(copyTriggers);
