@@ -8,6 +8,17 @@ add_action( 'after_setup_theme', function () {
 	remove_action( 'admin_print_styles', 'print_emoji_styles' );
 	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+	// If this is a static website without blog posts, your can remove feeds links.
+	// If comments are enabled, you can remove the "extra" feeds links.
+	// Optionally remove rel=alternative RSS feed links and extras (category, tag, comment)
+	remove_action('wp_head', 'feed_links', 2);
+	remove_action('wp_head', 'feed_links_extra', 3);
+
+	// remove API discovery links if not used for Zapier, Instagram etc.
+	remove_action('wp_head', 'rest_output_link_wp_head', 10);
+	remove_action('template_redirect', 'rest_output_link_header', 11);
+
 	remove_action( 'wp_head', 'wp_generator' );
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
