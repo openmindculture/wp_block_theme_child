@@ -96,10 +96,10 @@ add_filter( 'body_class', 'custom_body_class' );
 
 function custom_get_option_or_default( $option_key, $default_value ) {
 	$value = get_theme_mod( $option_key );
-	if ( ! $value || empty( $value ) ) {
+	if ( empty( $value ) ) {
 		$value = get_option( $option_key );
 	}
-	if ( ! empty( $value ) ) {
+	if ( !empty( $value ) ) {
 		return $value;
 	}
 
