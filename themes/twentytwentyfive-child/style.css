@@ -268,6 +268,13 @@ nav ul li.page_item_has_children > a::after {
     }
 }
 
+.grid {
+    display: grid;
+    grid-template-rows: masonry;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
 ::selection {
     background-color: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--base);
