@@ -20,9 +20,11 @@ You can delete the line `add_theme_support('block-templates', false);` in `inc/f
 
 This code is free and open-source software without any warranty whatsoever. This template is subject to change or deletion at any time. You can fork, copy, use and modify its code at your own risk.
 
+The theme depends on the officiel Twenty Twenty-Five WordPress theme, WordPress core blocks and functions. Any of those might also change in the feature or stop being supported. Use at your own risk!
+
 ## WordPress Block Theme Child Template
 
-[wp_block_theme_child](https://github.com/openmindculture/wp_block_theme_child) is a local host WordPress setup using Docker, docker-compose, and wp-cli
+[wp_block_theme_child](https://github.com/openmindculture/wp_block_theme_child) is a local host WordPress setup using docker compose, and wp-cli
 to install themes and plugins, including a simple template skeleton for a Twenty-something child
 theme using the template engine (`theme.json`), block editor and full-site editing.
 
