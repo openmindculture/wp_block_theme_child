@@ -118,3 +118,15 @@ function custom_get_option_or_default( $option_key, $default_value ) {
 
 	return $default_value;
 }
+
+/* more or less collapsible details block */
+add_filter('render_block', 'add_close_button_to_details_block', 10, 2);
+
+function add_close_button_to_details_block($block_content, $block) {
+	if ($block['blockName'] !== 'core/details') {
+		return $block_content;
+	}
+	$close_button = '<button class="wp-block-details-close">Weniger</button>';
+	$block_content = str_replace('</details>', $close_button . '</details>', $block_content);
+	return $block_content;
+}

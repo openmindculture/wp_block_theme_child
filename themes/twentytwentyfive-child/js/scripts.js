@@ -35,7 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const detailsBlocksCloseButtons = document.querySelectorAll('details .wp-block-details-close');
     for (const closeButton of detailsBlocksCloseButtons) {
         closeButton.addEventListener('click', () => {
-            closeButton.closest('details').removeAttribute('open');
+            const details = closeButton.closest('details');
+            details.classList.add('collapsing');
+            details.removeAttribute('open');
+            window.setTimeout(() => {
+                details.classList.remove('collapsing');
+            }, 2000)
         })
     }
 

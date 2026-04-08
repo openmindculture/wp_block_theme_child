@@ -367,10 +367,17 @@ h2, body h2, :root :where(.is-layout-constrained) > h2 {
     display: none;
 }
 
-.initially-hidden:target {
+.initially-hidden {
+    display: none;
+}
+
+.initially-hidden:target,
+.active .initially-hidden,
+.active + .initially-hidden {
     display: block;
 }
 
+/* more or less collapsible details block */
 details summary {
     list-style: none;
 }
@@ -380,20 +387,73 @@ details summary::-webkit-details-marker {
     display: none;
 }
 
-@keyframes details-show {
-    from {
-        opacity: 0;
-        transform: translateY(-0.5em);
-    }
+::details-content {
+    transition:
+            height 2s ease,
+            max-height 2s ease,
+            opacity 2s ease,
+            content-visibility 0.5s ease allow-discrete;
+    height: 0;
+    max-height: 0;
+    overflow: clip;
+    opacity: 0;
 }
 
-details[open] > *:not(summary),
-details[close] > *:not(summary) {
-    animation: details-show 1000ms ease-in-out;
+/* Only the real open state defines expansion */
+[open]::details-content {
+    height: auto;
+    max-height: 10000px;
+    opacity: 1;
+}
+
+@supports (interpolate-size: allow-keywords) {
+    ::details-content,
+    [open]::details-content {
+        max-height: unset;
+    }
+    :root {
+        interpolate-size: allow-keywords;
+    }
 }
 
 details[open] summary {
     display: none;
+}
+
+/* collapsing keeps layout stable but does NOT keep it expanded */
+.collapsing::details-content {
+    height: auto;
+    animation-duration: 2s;
+    animation-name: fade-out;
+    animation-fill-mode: forwards;
+}
+
+/* optionally reuse fade-in effect for every main site content */
+/* .site-main {
+    opacity: 0;
+    animation: fade-in 1.25s ease forwards;
+} */
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-main {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        height: auto;
+        opacity: 1;
+    }
+    to {
+        height: 0;
+        opacity: 0;
+    }
 }
 
 .wp-block-details-close {
@@ -401,8 +461,9 @@ details[open] summary {
     background: none;
     border: none;
     padding: 0;
-    font: inherit;
-    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
     cursor: pointer;
 }
 
