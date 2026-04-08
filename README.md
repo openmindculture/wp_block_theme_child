@@ -1,6 +1,8 @@
 # wp_block_theme_child
 
-WordPress block theme child is a WordPress child theme template for a classic/hybrid theme using the Gutenberg block editor but no full site editing, so that we can control our HTML head, page header, and page footer markup in PHP without the need for custom blocks or block variations, and no need to conform to the Gutenberg markup syntax.
+WordPress block theme child is a WordPress child theme template for a classic/hybrid theme using the Gutenberg block editor but no full site editing, so that we can control our HTML head, page header and page footer markup in PHP without the need for custom blocks or block variations, and no need to conform to the Gutenberg markup.
+
+This theme is actively maintained by [Ingo Steinke (@openmindculture)](https://github.com/openmindculture) and has been updated in 2026.
 
 ![screenshot](themes/twentytwentyfive-child/screenshot.png)
 
