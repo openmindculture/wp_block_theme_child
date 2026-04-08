@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?php the_title() ?></title>
+    <title><?php the_title() ?> - <?php bloginfo( 'name' ); ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
