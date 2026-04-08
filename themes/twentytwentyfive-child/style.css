@@ -27,8 +27,11 @@ License: proprietary
     --wp--style--global--wide-size: 1024px;
 }
 
-html, body {
-    font-size: 100%;
+html {
+    /* iOS Safari font size workaround */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 16px;
 }
 
 body, p {
