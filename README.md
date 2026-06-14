@@ -51,6 +51,9 @@ see [doc/setup.md](doc/setup.md)
 - _unless_ while restoring a backup to production
 - wipe obsolete preview servers, return 410 gone status (see `/410_gone`)
 
+### Development Requirements
+- node 22+ => `nvm install 22 && nvm use 22`
+
 ### Production Server Requirements
 - PHP 8.4+
 - MySQL or MariaDB
