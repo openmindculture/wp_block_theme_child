@@ -4,6 +4,10 @@ AuthUserFile /web/1/000/123/456/789012/.ghtpasswd
 Require user foo bar customer
 # ^ change lines above accordingly
 
+# FALLBACK for WordPress obsoletes classic BEGIN WordPress mod_rewrite.c block below on modern Apache servers
+FallbackResource /index.php
+# END FALLBACK for WordPress
+
 # merge lines below with the actual WordPress configuration
 # this is a sample of a German WordPress 6.8 setup
 
