@@ -27,7 +27,7 @@
             <div class="site-navigation wp-block-group alignwide">
 
                 <nav id="navigation-menu"
-                     class="navigation-menu wp-block-navigation is-responsive items-justified-right is-content-justification-right is-layout-flex wp-block-navigation-is-layout-flex">
+                     class="navigation-menu wp-block-navigation is-responsive items-justified-right is-content-justification-right wp-block-navigation-is-layout-flex">
                     <a id="site-navigation-menu-close" class="site-navigation-menu-close" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                              aria-hidden="true" focusable="false">
